@@ -1,0 +1,45 @@
+body{
+    background-color: #544bc2;
+}
+
+h1{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 45px;
+    text-align: center;
+    color: white;
+    padding:cm;
+    
+}
+
+#typing {
+   width: 300px;
+   height: auto;
+
+}
+
+h2{
+    text-align: center;
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+}
+
+#checkPage{
+    background-color: #544bc2;
+    color: white;
+    border: 2px solid white;
+
+}
+
+#checkPage:hover{
+    background-color: ;
+    display: flex;
+    justify-content: center;
+}
+
+#orHolder{
+    text-align: center;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    font-size: x-large;
+    padding: 13px;
+}

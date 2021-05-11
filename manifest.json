@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+  
+    "name": "GTmetrix Analyzer",
+    "description": "Bring Sector job search to your browser",
+    "version": "1.0",
+    "short_name": "Camille",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "browser_action": {
+        "default_icon": {
+
+        "48": "img/sectorx48.png",
+        "72": "img/sectorx72.png"
+        },
+        "default_title": "Bring Sector job search to your browser",
+        "default_popup": "popup.html"
+    },
+   
+    "permissions": [
+     "activeTab",
+     "<all_urls>"
+
+    
+
+     ]
+
+
+  }

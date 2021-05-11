@@ -1,0 +1,30 @@
+ <!Doctype html>
+<html>
+  <head>
+    <title>GTmetrix Analyzer</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
+  </head>
+  <body style="background-color: #544bc2;">
+    <h1>Sector:</h1>
+    <div><img id="typing" src="typing.jpg" alt=""></div>
+    <h2>This popup ensures that you can easily transfer your job description data from any webpage onto our Sector platform!
+    </h2>
+    <button id="checkPage">Check this page now!</button>
+    <div id="orHolder">or</div>
+    <form id="form"> 
+    </form>
+    <div id="app">
+      <textarea id="newmessage"></textarea>
+      <button id="aSubmit">Add note</button>
+      <button onclick="flipNoteOrder()"> Flip Note Order</button>
+    </div>
+    <div id="notes"></div>
+    <script src="db1.js"></script>
+    <script src="lodash.min.js"></script>
+
+  </body>
+
+</html>
