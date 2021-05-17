@@ -14,17 +14,7 @@ let dbReq = indexedDB.open('myDatabase', 2);
    }
  }
 
-fetch("https://api.apispreadsheets.com/data/11115/", {
-	method: "POST",
-	body: JSON.stringify({"data": {"Description":value }}),
-}).then(res =>{
-	if (res.status === 201){
-		
-	}
-	else{
-		
-	}
-})
+
 
 
 
@@ -173,9 +163,49 @@ function getAndDisplayNotes(db) {
 document.getElementById("aSubmit").addEventListener("click",submitNote);
 function submitNote() {
   let message = document.getElementById('newmessage');
+  userInput = message.value
   addStickyNote(db, message.value);
   message.value = '';
+
+const ACCESS_TOKEN = 'ya29.a0AfH6SMA17ktWAyjKtlvi0SWCuaYuITZ9jPfWb0mpLDQvCK6ptAU2TsnymTeoMwTmsnRAjKQFg-C0AA1SdhlnJUF7v-3XiRkiPAA2cungbl52O5TdbaKPXzqutdnT_HC68EJ7jJpR2mmpA4fanTQwv8XYCjWQ';
+
+  fetch('https://sheets.googleapis.com/v4/spreadsheets/1SlktS8Sjvxa1D3MBZ0Ez8EZ-2HBn5wqerhhPmjheuok:batchUpdate', {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    //update this token with yours. 
+    Authorization: `Bearer ${ACCESS_TOKEN}`,
+  },
+	body: JSON.stringify({
+    requests: [{
+      repeatCell: {
+        range: {
+          startColumnIndex: 0,
+          endColumnIndex: 1,
+          startRowIndex: 0,
+          endRowIndex: 1,
+          sheetId: 0
+        },
+        cell: {
+          userEnteredValue: {
+            "stringValue": userInput
+          },
+        },
+        fields: "*"
+      }
+    }]
+  }),
+}).then(res =>{
+	if (res.status === 201){
+		
+	}
+	else{
+		
+	}
+})
 }
+
+
   
 //   $.ajax({
 //     url:'https://api.apispreadsheets.com/data/11115/',
@@ -210,3 +240,4 @@ function flipNoteOrder(notes) {
   reverseOrder = !reverseOrder;
   getAndDisplayNotes(db);
 }
+
