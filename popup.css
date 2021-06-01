@@ -11,6 +11,11 @@ h1{
     
 }
 
+a{
+    font-size:x-large ;
+    color:#1CAC78
+}
+
 #typing {
    width: 300px;
    height: auto;
@@ -42,4 +47,12 @@ h2{
     font-family: 'Varela Round', sans-serif;
     font-size: x-large;
     padding: 13px;
+}
+#pageLink{
+text-decoration: none;
+font-size: small;
+padding: 55px;
+color: white;
+
+
 }

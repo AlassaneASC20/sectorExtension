@@ -8,19 +8,21 @@
     <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
   </head>
   <body style="background-color: #544bc2;">
-    <h1>Sector:</h1>
+    <h1>Sector:<a> for chrome</a></h1>
     <div><img id="typing" src="typing.jpg" alt=""></div>
     <h2>This popup ensures that you can easily transfer your job description data from any webpage onto our Sector platform!
     </h2>
-    <button id="checkPage">Check this page now!</button>
-    <div id="orHolder">or</div>
     <form id="form"> 
     </form>
     <div id="app">
-      <textarea id="newmessage"></textarea>
+      
+      <textarea id="jobTitle" style="margin: 0px; width: 202px; height: 17px;" placeholder="Enter Job Title here..."></textarea>
+      <textarea id="jobCompany" style="margin: 0px; width: 202px; height: 17px;" placeholder="Enter Company here..."></textarea>
+      <textarea id="newmessage" style="margin: 0px; width: 293px; height: 50px;" placeholder="Enter Job Description here..."></textarea>
       <button id="aSubmit">Add note</button>
-      <button onclick="flipNoteOrder()"> Flip Note Order</button>
+      <!--button onclick="flipNoteOrder()"> Flip Note Order</button>-->
     </div>
+    <a id="pageLink" href="https://joinsector.com/">Click Here to Visit our Homepage</a>
     <div id="notes"></div>
     <script src="db1.js"></script>
     <script src="lodash.min.js"></script>
